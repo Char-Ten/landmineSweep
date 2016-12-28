@@ -1,0 +1,95 @@
+#tbl td {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+    background: #ddd;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/*tbl*/
+
+#tbl .z-isLandmind {
+    background: #000;
+}
+
+#tbl .z-open {
+    background: #fff;
+}
+
+#tbl .z-flag {
+    background: #f00
+}
+
+#tbl .z-num-1 {
+    color: #00cc00
+}
+
+#tbl .z-num-2 {
+    color: #009999
+}
+
+#tbl .z-num-3 {
+    color: #04819e
+}
+
+#tbl .z-num-4 {
+    color: #1435ad
+}
+
+#tbl .z-num-5 {
+    color: #ff7f00
+}
+
+#tbl .z-num-6 {
+    color: #ffb100
+}
+
+#tbl .z-num-7 {
+    color: #ff7400
+}
+
+#tbl .z-num-8 {
+    color: #f00
+}
+
+#dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: all .5s;
+}
+
+#dialog.z-hide {
+    display: none;
+}
+
+#dialog .mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#dialog .dialog-box {
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    background: #fff;
+    text-align: center;
+    transform: translateX(-50%)
+}
+
+#dialog section {
+    padding: 25px;
+}
+
+#dialog footer {
+    padding: 5px 25px;
+    background: #eee;
+}

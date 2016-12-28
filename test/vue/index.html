@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="./css/index.css" />
+</head>
+
+<body>
+    <div id="game">
+        <m-tbl></m-tbl>
+        <transition name="hd">
+            <m-dialog v-if="bool" @close="eClose" :content="content"></m-dialog>
+        </transition>
+    </div>
+    <div id="tp">
+        <template id="m_tbl">
+            <table id="tbl" @click="eClick" @contextmenu="eCtm">
+                <tr v-for="items in map">
+                    <td v-for="item in items" 
+                        :data-index="item.index" 
+                        :class="setClass(item)"
+                        v-text="setText(item)"></td>
+                </tr>
+            </table>
+        </template>
+        <template id="m_dialog">
+            <div id="dialog">
+                <div class="mask"></div>
+                <div class="dialog-box">
+                    <section id="dialog_ct" v-html="content"></section>
+                    <footer>
+                        <input type="button" value="确定" id="sub" @click="eClick"/>
+                    </footer>
+                </div>
+            </div>  
+        </template>
+    </div>
+    <script src="http://cdn.bootcss.com/vue/2.0.0/vue.min.js"></script>
+    <script src="../../lib/LandmineSweep.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
