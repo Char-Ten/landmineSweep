@@ -47,7 +47,6 @@ var lms = new LandmineSweep()
                 }
             },
             _Update: function() {
-                console.log()
                 lms.eachMap();
                 if (lms.isWin) {
                     CTRL.$emit('win');
